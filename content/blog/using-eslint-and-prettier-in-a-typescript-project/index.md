@@ -27,6 +27,8 @@ First, install all the required dev dependencies:
 yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --dev
 ```
 
+<Quote><strong>Note:</strong> If you used <code>create-react-app</code> to bootstrap your project, do not install <code>eslint</code> manually. It is already included as a dependency of <code>react-scripts</code>, and installing a more recent version can cause errors.</Quote>
+
 -   <Link to="https://www.npmjs.com/package/eslint"><code>eslint</code></Link>: The core ESLint linting library
 -   <Link to="https://www.npmjs.com/package/@typescript-eslint/parser"><code>@typescript-eslint/parser</code></Link>: The parser that will allow ESLint to lint TypeScript code
 -   <Link to="https://www.npmjs.com/package/@typescript-eslint/eslint-plugin"><code>@typescript-eslint/eslint-plugin</code></Link>: A plugin that contains a bunch of ESLint rules that are TypeScript specific
@@ -117,6 +119,7 @@ Next, the `.eslintrc.js` file needs to be updated:
 module.exports = {
   parser: "@typescript-eslint/parser", // Specifies the ESLint parser
   extends: [
+    "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
     "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
     "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
     "plugin:prettier/recommended" // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
