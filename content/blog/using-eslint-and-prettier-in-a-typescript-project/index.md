@@ -27,7 +27,7 @@ First, install all the required dev dependencies:
 yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --dev
 ```
 
-<Quote><strong>Note:</strong> If you used <code>create-react-app</code> to bootstrap your project, do not install <code>eslint</code> manually. It is already included as a dependency of <code>react-scripts</code>, and installing a more recent version can cause errors.</Quote>
+<Quote><strong>Note:</strong> If using <code>create-react-app</code> to bootstrap a project, <code>eslint</code> is already included as a dependency through <code>react-scripts</code>, and therefore it is not necessary to explicitly install it with <code>yarn</code>.</Quote>
 
 -   <Link to="https://www.npmjs.com/package/eslint"><code>eslint</code></Link>: The core ESLint linting library
 -   <Link to="https://www.npmjs.com/package/@typescript-eslint/parser"><code>@typescript-eslint/parser</code></Link>: The parser that will allow ESLint to lint TypeScript code
